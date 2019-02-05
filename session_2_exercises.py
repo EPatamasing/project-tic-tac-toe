@@ -3,7 +3,6 @@
 # initialize your board list as global list here to pass to draw the board
 Board = [' '] * 10
 
-
 def is_winner(board, letter):
     '''We want this function to see if the letter has won the game.
     This function will be called after every move so the game can detect the new move
@@ -11,7 +10,16 @@ def is_winner(board, letter):
     has not won
 
     Hint: Detect all possibilities on how to win tic tac toe'''
-
+    range_horiz = range(1,8,3)
+    range_vert = range(1,4,1)
+    
+    for i in range:
+      if board[i] == board[i+1] and board[i] == board[i+2]:
+        return True
+      elif board[i] == board[i+3] and board[i] == board[i+6]:
+        return True
+      elif board[i]      
+  
 
 def is_space_free(board, position):
     '''Return True if the space is free, false if it isn't'''
@@ -116,7 +124,8 @@ def main():
 
             # when the game ends (game_on = False), ask if the player will want to play again
             # break if they do not want to play again
-
+            
+            print(is_winner(Board, 'X'))
 
 
 

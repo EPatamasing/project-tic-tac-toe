@@ -3,14 +3,28 @@ import random
 def draw_board(board):
     # This function prints out the board that it was passed and should not return anything
     #HINT: the parameter board should hold a list that holds the position of 'X's and 'O's
+    print('   |   |')
+    print(' '  board[7]  ' | '  board[8]  ' | '  board[9])
+    print('   |   |')
+    print('-----------')
+    print('   |   |')
+    print(' '  board[4]  ' | '  board[5]  ' | '  board[6])
+    print('   |   |')
+    print('-----------')
+    print('   |   |')
+    print(' '  board[1]  ' | '  board[2]  ' | '  board[3])
+    print('   |   |')
+    print('\n')
     return
 
 def input_player_letter():
     #Ask the player if they want to be 'X' or 'O'
     #Return the chosen letter
     #Hint: Use a loop to keep prompting the player for a letter if the input is not valid
-
-    return
+    letter = ""
+    while (letter != 'X' and letter != 'O'):
+      letter = input("Choose to be player X or player O\n").upper()  
+    return letter
 
 def who_goes_first():
     #Randomly choose who goes first
